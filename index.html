@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Entrevista para desarrolladores</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<h1>Entrevista para desarrolladores</h1>
+
+		<form onsubmit="return validar()">
+
+			<div class="form-group">
+				<label for="NomCom">Nombre completo:</label>
+				<input class="form-control" type="text" id="NomCom" name="NomCom" value="">
+				<small class="form-text text-danger" id="msgNomCom"></small>
+			</div>
+
+			<div class="form-group">
+				<label for="Edad">Edad:</label>
+				<input class="form-control" type="number" id="Edad" name="Edad" value="">
+				<small class="form-text text-danger" id="msgEdad"></small>
+			</div>
+
+			<div class="form-group">
+				<label for="FechaEnt">Fecha de la entrevista:</label>
+				<input class="form-control" type="date" id="FechaEnt" name="FechaEnt" value="">
+				<small class="form-text text-danger" id="msgFechaEnt"></small>
+			</div>
+
+			<div class="form-group">
+				<label for="Pin">Pin:</label>
+				<input class="form-control" type="text" id="Pin" name="Pin" value="">
+				<small class="form-text text-danger" id="Pin"></small>
+			</div>
+
+			<div class="form-group">
+				<label>Experiencia de trabajo en desarrollo:</label>
+
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="Exp2" id="Exp2" value="Radio 1">
+					<label class="form-check-label" for="Exp2">De 0 a 2 años</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="Exp5" id="Exp5" value="Radio 1">
+					<label class="form-check-label" for="Exp5">De 2 a 5 años</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="Exp10" id="Exp10" value="Radio 1">
+					<label class="form-check-label" for="Exp10">De 5 a 10 años</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="Exp20" id="Exp20" value="Radio 1">
+					<label class="form-check-label" for="Exp20">De 10 a 20 años</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="ExpMas" id="ExpMas" value="Radio 1">
+					<label class="form-check-label" for="ExpMas">Más de 20 años</label>
+				</div>
+				<small class="form-text text-danger" id="msgExp"></small>
+			</div>
+
+			<div class="form-group">
+				<label for="Ingles">Nivel de inglés:</label>
+
+				<select class="form-control" name="nivelIngles" id="nivelIngles">
+					<option value="">Seleccionar...</option>
+					<option value="30">10</option>
+					<option value="30">20</option>
+					<option value="30">30</option>
+					<option value="40">40</option>
+					<option value="50">50</option>
+					<option value="60">60</option>
+					<option value="70">70</option>
+					<option value="80">80</option>
+					<option value="90">90</option>
+					<option value="100">100</option>
+				</select> % <br />
+			</div>
+
+			<div>
+
+				<label for="LengProg">Lenguaje de Programación que domina: </label>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="lenguaje" id="Java" value="Java">
+					<label class="form-check-label" for="Java">Java</label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="lenguaje" id="C++" value="C++">
+					<label class="form-check-label" for="C++">C++</label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="lenguaje" id="Python" value="Python">
+					<label class="form-check-label" for="Python">Python</label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="lenguaje" id="PHP" value="PHP">
+					<label class="form-check-label" for="PHP">PHP</label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="lenguaje" id="Perl" value="Perl">
+					<label class="form-check-label" for="Perl">Perl</label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="chk" id="C#" value="C#">
+					<label class="form-check-label" for="C#">C#</label>
+				</div>
+			</div>
+
+			<div>
+				<label>Sistemas operativos manejados:</label>
+				<select class="form-control" name="sistemasOper" multiple>
+					<option value="Windows">Windows</option>
+					<option value="Linux" selected>Linux</option>
+					<option value="Free BSD">Free BSD</option>
+					<option value="Solaris">Solaris</option>
+					<option value="MacOS X">MacOS X</option>
+					<option value="Android">Android</option>
+				</select>
+			</div>
+
+			<div>
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="poderViajar" id="DispViajar"
+						value="DispViajar">
+					<label class="form-check-label" for="DispViajar">Disponibilidad para viajar</label>
+				</div>
+
+				<div class="form-check">
+					<input class="form-check-input" type="checkbox" name="trabajarNoche" id="DispNoche"
+						value="DispNoche">
+					<label class="form-check-label" for="DispNoche">Disponibilidad para trabajar de noche</label>
+				</div>
+			</div>
+
+			<div>
+				<label>Observaciones:</label>
+				<textarea name="observaciones" cols="40" rows="6"></textarea> <br />
+				<input name="codigo" type="hidden" value="" />
+			</div>
+
+			<div>
+				<input type="submit" value="Enviar" />
+			</div>
+
+		</form>
+	</div>
+	<script src="scriptEntrevista.js"></script>
+</body>
+
+</html>
